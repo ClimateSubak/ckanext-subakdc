@@ -1,0 +1,21 @@
+{% set tags = h.get_facet_items_dict('tags', c.search_facets, limit=3) %}
+{% set placeholder = _('E.g. environment') %}
+
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <form method="get" action="{% url_for 'dataset.search' %}" style="border-bottom: 2px solid #ddd;">
+        <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}"
+            id="field-main-search" type="text" class="hero-search-bar" name="q" value="" autocomplete="off"
+            placeholder="Search data" style="max-width: 450px;" />
+        <button type="submit" aria-labelledby="search-label"
+            style="background-color: transparent; border: none; background-color: transparent; border: 1px white solid; border-radius: 10px; padding: 4px; width: 100px; vertical-align: super; float:right;">
+            <i class="fa fa-search" style="color: white; font-size: 50px;"></i>
+            <span class="sr-only" id="search-label">{{ _('Search') }}</span>
+        </button>
+    </form>
+    <div class="tags">
+        <h3 style="color: #FFF">{{ _('Popular tags') }}</h3>
+        {% for tag in tags %}
+        <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+        {% endfor %}
+    </div>
+</div>

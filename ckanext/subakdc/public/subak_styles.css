@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+}
+
+body {
+    background: url(/images/subak_bg-min2.jpg) no-repeat !important;
+    margin-bottom: 140px !important; /* Margin bottom by footer height */
+}
+
+.site-footer {
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 140px !important; /* Set the fixed height of the footer here */
+
+}
+
+.main {
+  min-height: 95vh !important;
+}
+
+@media (min-width: 768px) {
+    .hero {
+      background: transparent !important;
+      padding-top: 200px !important;
+      padding-bottom: 200px !important;
+    }
+}
+
+.masthead {
+    background: transparent !important;
+}
+
+.hero-search-bar {
+    font-size: 58px;
+    line-height: 67px;
+    color: #fff;
+    font-family: Helvetica;
+    border:none;
+    background-color: transparent;
+}
+
+.hero-search-bar::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF;
+    opacity: 1; /* Firefox */
+  }
+  
+.hero-search-bar::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #FFF;
+  }
+  
+.hero-search-bar::-ms-input-placeholder { /* Microsoft Edge */
+  color: #FFF;
+}
+
+.full-width {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
