@@ -76,10 +76,7 @@
           src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}"
           style="float:left;" /></a>
       {% endif %}
-      <h2
-        style="position:relative; float:right; color:  #C95E3B; font-size: 15px; font-weight:400; margin-left: 10px; margin-top: 22px;">
-        DATA CATALOGUE
-      </h2>
+      {% include 'home/snippets/catalogue_badge.html' %}
       {% endblock %}
     </div>
 
