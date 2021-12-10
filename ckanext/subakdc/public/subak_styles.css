@@ -3,8 +3,9 @@ html {
 }
 
 body {
-    background: url(/images/subak_bg-min2.jpg) no-repeat !important;
+    background: linear-gradient(90deg, rgba(2,0,36,0.6) 0%, rgba(1,59,92,0.6) 0%, rgba(0,53,82,0.6) 100%), url(/images/subak_tributaries_bg_min.jpg) no-repeat !important;
     margin-bottom: 140px !important; /* Margin bottom by footer height */
+    background-size: cover !important;
 }
 
 .site-footer {
