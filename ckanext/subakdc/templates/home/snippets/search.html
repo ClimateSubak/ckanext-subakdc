@@ -1,5 +1,5 @@
 {% set tags = h.get_facet_items_dict('tags', c.search_facets, limit=3) %}
-{% set placeholder = _('E.g. environment') %}
+{% set stats = h.get_site_statistics() %}
 
 <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
     <form method="get" action="{% url_for 'dataset.search' %}" style="border-bottom: 2px solid #ddd;">
@@ -12,8 +12,17 @@
             <span class="sr-only" id="search-label">{{ _('Search') }}</span>
         </button>
     </form>
+    <div>
+        <h2 style="font-size: 14px; font-weight:400">
+            <span style="color: #FFF;">{{ h.SI_number_span(stats.dataset_count) }} DATASETS</span>
+            <span style="color: #FFF;" class="ms-3 me-3">|</span>
+            <span style="color: #C95E3B;"><img src="{{ 'images/search.svg' }}" class="me-3">SEARCHABLE </span>
+            <span style="color: #C95E3B;"><img src="{{ 'images/connect.svg' }}" class="ms-3 me-3">CONNECTED </span>
+            <span style="color: #C95E3B;"><img src="{{ 'images/trust.svg' }}" class="ms-3 me-3">TRUSTED </span>
+        </h2>
+    </div>
     <div class="tags">
-        <h3 style="color: #FFF">{{ _('Popular tags') }}</h3>
+        <h3 style="color: #FFF">{{ _('Quick explore by theme') }}</h3>
         {% for tag in tags %}
         <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
         {% endfor %}
