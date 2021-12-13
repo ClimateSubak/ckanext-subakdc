@@ -21,10 +21,14 @@
             <span style="color: #C95E3B;"><img src="{{ 'images/trust.svg' }}" class="ms-3 me-3">TRUSTED </span>
         </h2>
     </div>
-    <div class="tags">
-        <h3 style="color: #FFF">{{ _('Quick explore by theme') }}</h3>
-        {% for tag in tags %}
-        <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-        {% endfor %}
-    </div>
+</div>
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 tags">
+    <h3 style="color: #FFF">{{ _('Quick explore by theme') }}</h3>
+    {% for tag in tags %}
+    <a href="{% url_for 'dataset.search', tags=tag.name %}">
+        <button type="button" class="btn btn-outline-light me-2" style="border: 1px solid;">
+            {{ h.truncate(tag.display_name, 22) }}
+        </button>
+    </a>
+    {% endfor %}
 </div>
