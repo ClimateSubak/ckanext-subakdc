@@ -19,6 +19,15 @@ body {
   float:right; 
 }
 
+.control-order-by {
+  border: none;
+  float: right;
+  max-width: 245px;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
 .main {
   min-height: 95vh !important;
 }
