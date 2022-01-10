@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     fontFamily: {
     'ubuntu': ['Ubuntu Mono'],
+    'quicksand': ['Quicksand'],
+    'helvetica': ['Helvetica Neue']
     },
     extend: {
       colors: {
