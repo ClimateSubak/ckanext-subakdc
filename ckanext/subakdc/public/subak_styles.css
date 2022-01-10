@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('/fonts/UbuntuMono-Regular.ttf')  format('truetype')
+}
+
 html {
   height: 100%;
+  font-family: 'Ubuntu Mono'
 }
 
 body {

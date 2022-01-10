@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./ckanext/subakdc/**/*.{html,js}"],
   theme: {
+    fontFamily: {
+    'ubuntu': ['Ubuntu Mono'],
+    },
     extend: {
       colors: {
         darkblue: '#0f2b43',
