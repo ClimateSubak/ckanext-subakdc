@@ -12,6 +12,10 @@ html {
   height: 100%;
 }
 
+img {
+  display:inline !important;
+}
+
 p {
   font-family: 'Quicksand'
 }
