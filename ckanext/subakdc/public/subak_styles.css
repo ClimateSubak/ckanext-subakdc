@@ -30,6 +30,14 @@ body {
 
 .main {
   min-height: 95vh !important;
+  background: #fff !important;
+}
+
+.wrapper {
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: #fff !important;
 }
 
 @media (min-width: 768px) {
