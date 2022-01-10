@@ -534,6 +534,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
+.font-ubuntu {
+  font-family: Ubuntu Mono;
+}
+
 .font-bold {
   font-weight: 700;
 }
