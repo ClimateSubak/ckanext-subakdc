@@ -1,0 +1,18 @@
+{% ckan_extends %}
+
+{% block resources %}
+    <div class="flex">
+        <div class="flex-auto">
+            {{ super() }}
+        </div>
+        {% if 'freshness_score' in h %}
+        <div class="flex-auto mt-2 text-right">
+            {% set freshness_score = h.freshness_score(package) %}
+            {% if freshness_score > 0 %}
+                <span class="underline decoration-dashed cursor-help" title="The dataset freshness score is a measure of how recently a dataset resource was updated.">Dataset freshness</span>:
+                <span class="font-bold text-3xl">{{ freshness_score }}<span class="text-xl text-gray-400">/5</span></span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
