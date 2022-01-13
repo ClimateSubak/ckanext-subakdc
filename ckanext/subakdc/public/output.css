@@ -518,6 +518,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -576,14 +580,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 94 59 / var(--tw-bg-opacity));
+}
+
+.bg-darkblue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 43 67 / var(--tw-bg-opacity));
+}
+
 .bg-teal {
   --tw-bg-opacity: 1;
   background-color: rgb(29 131 139 / var(--tw-bg-opacity));
 }
 
-.bg-orange {
+.bg-pink {
   --tw-bg-opacity: 1;
-  background-color: rgb(201 94 59 / var(--tw-bg-opacity));
+  background-color: rgb(176 86 107 / var(--tw-bg-opacity));
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 101 143 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -594,8 +613,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .text-right {
   text-align: right;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.font-ubuntu {
+  font-family: Ubuntu Mono;
+}
+
+.font-helvetica {
+  font-family: Helvetica Neue;
 }
 
 .text-3xl {
@@ -610,6 +645,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-darkblue {
+  --tw-text-opacity: 1;
+  color: rgb(15 43 67 / var(--tw-text-opacity));
+}
+
+.text-teal {
+  --tw-text-opacity: 1;
+  color: rgb(29 131 139 / var(--tw-text-opacity));
+}
+
+.text-pink {
+  --tw-text-opacity: 1;
+  color: rgb(176 86 107 / var(--tw-text-opacity));
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgb(27 101 143 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -630,6 +685,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
           text-decoration-style: dashed;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:bg-orange:hover {

@@ -1,18 +1,46 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('fonts/UbuntuMono-Regular.ttf')  format('truetype')
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand-Regular.ttf')  format('truetype')
+}
+
 html {
   height: 100%;
+}
+
+img {
+  display:inline !important;
+}
+
+p {
+  font-family: 'Quicksand'
 }
 
 body {
     background: linear-gradient(90deg, rgba(2,0,36,0.6) 0%, rgba(1,59,92,0.6) 0%, rgba(0,53,82,0.6) 100%), url(/images/subak_tributaries_bg_min.jpg) no-repeat !important;
     margin-bottom: 140px !important; /* Margin bottom by footer height */
     background-size: cover !important;
+    font-family: "Quicksand", Helvetica, Arial, sans-serif;
 }
 
 .site-footer {
   bottom: 0 !important;
   width: 100% !important;
   height: 140px !important; /* Set the fixed height of the footer here */
+}
 
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
+.masthead .navigation .nav-pills li.active a {
+  background-color: transparent !important;
+  text-decoration: underline 2px solid white !important;
+  text-underline-offset: 3px !important;
 }
 
 .catalogue_badge {

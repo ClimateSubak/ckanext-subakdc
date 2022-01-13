@@ -7,20 +7,23 @@
             id="field-main-search" type="text" class="hero-search-bar" name="q" value="" autocomplete="off"
             placeholder="Search data" style="max-width: 450px;" />
         <button type="submit" aria-labelledby="search-label"
-            style="background-color: transparent; border: none; background-color: transparent; border: 1px white solid; border-radius: 10px; padding: 4px; width: 100px; vertical-align: super; float:right;">
+            style="background-color: transparent; background-color: transparent; padding: 4px; width: 100px; vertical-align: super; float:right;">
             <i class="fa fa-search" style="color: white; font-size: 50px;"></i>
             <span class="sr-only" id="search-label">{{ _('Search') }}</span>
         </button>
     </form>
     <div>
-        <h2 style="font-size: 14px; font-weight:400">
+        <h2 style="font-size: 14px; font-weight:400" class="font-ubuntu">
             <span style="color: #FFF;">{{ h.SI_number_span(stats.dataset_count) }} DATASETS</span>
             <span style="color: #FFF;" class="ms-3 me-3">|</span>
-            <span style="color: #C95E3B;"><img src="{{ 'images/search.svg' }}" class="me-3 inline">SEARCHABLE
+            <span style="color: #C95E3B;"><img src="{{ 'images/search.svg' }}"
+                    class="me-3 inline font-ubuntu">SEARCHABLE
             </span>
-            <span style="color: #C95E3B;"><img src="{{ 'images/connect.svg' }}" class="ms-3 me-3 inline">CONNECTED
+            <span style="color: #C95E3B;"><img src="{{ 'images/connect.svg' }}"
+                    class="ms-3 me-3 inline font-ubuntu">CONNECTED
             </span>
-            <span style="color: #C95E3B;"><img src="{{ 'images/trust.svg' }}" class="ms-3 me-3 inline">TRUSTED
+            <span style="color: #C95E3B;"><img src="{{ 'images/trust.svg' }}"
+                    class="ms-3 me-3 inline font-ubuntu">TRUSTED
             </span>
         </h2>
     </div>
