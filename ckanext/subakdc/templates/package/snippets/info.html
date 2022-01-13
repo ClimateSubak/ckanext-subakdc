@@ -1,0 +1,18 @@
+{% ckan_extends %}
+
+{% block nums %}
+    {% if 'freshness_score' in h %}
+    {% set freshness_score = h.freshness_score(pkg) %}
+        {% if freshness_score > 0 %}
+            <div class="nums">
+                {# TODO replace inline style with w-full tailwind class #}
+                <dl style="width: 100%">
+                    <dt>{{ _('Dataset freshness') }} <i class="fa-question-circle" title="The dataset freshness score is a measure of how recently a dataset resource was updated."></i></dt>
+                    <dd>{{ freshness_score }}<span class="text-3xl text-gray-400">/5</span></dd>
+                </dl>
+            </div>
+        {% endif %}
+    {% endif %}
+  
+  {{ super() }}
+{% endblock %}
