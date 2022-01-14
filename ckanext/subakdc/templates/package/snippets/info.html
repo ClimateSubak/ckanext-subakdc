@@ -3,11 +3,29 @@
 {% block nums %}
     {% if 'freshness_score' in h %}
     {% set freshness_score = h.freshness_score(pkg) %}
+    {% set freshness_tooltip = '<p class="break-normal">This score represents how recently one or more of the data resources was last updated.</p>
+                                <ul>
+                                    <li>5: &lt; 6 months</li>
+                                    <li>4: &lt; 12 months</li>
+                                    <li>3: &lt; 18months</li>
+                                    <li>2: &lt; 24 months</li>
+                                    <li>1: &gt; 24 months</li>
+                                </ul>' %}
         {% if freshness_score > 0 %}
             <div class="nums">
                 {# TODO replace inline style with w-full tailwind class #}
                 <dl style="width: 100%">
-                    <dt>{{ _('Dataset freshness') }} <i class="fa-question-circle" title="The dataset freshness score is a measure of how recently a dataset resource was updated."></i></dt>
+                    <dt><span class="underline decoration-dashed"
+                           role="button"
+                           tabindex="0"
+                           title="Dataset freshness score" 
+                           data-target="popover" 
+                           data-content="{{ freshness_tooltip }}" 
+                           data-placement="right"
+                           data-html="true"
+                           data-trigger="focus">
+                           {{ _('Dataset freshness') }}</span>
+                    </dt>
                     <dd>{{ freshness_score }}<span class="text-3xl text-gray-400">/5</span></dd>
                 </dl>
             </div>
