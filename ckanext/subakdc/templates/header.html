@@ -73,8 +73,8 @@
       {% block header_logo %}
       {% if g.site_logo %}
       <a class="navbar-brand logo" style="padding:0 !important; z-index:999 !important;"
-        href="{{ h.url_for('home.index') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}"
-          alt="{{ g.site_title }}" title="{{ g.site_title }}" style="float:left;" /></a>
+        href="{{ h.url_for('home.index') }}"><img src="/images/SUBAK_LOGO.png"
+        aria-label="Home page" style="float:left;" /></a>
       {% endif %}
       {% include 'home/snippets/catalogue_badge.html' %}
       {% endblock %}
