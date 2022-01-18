@@ -1,3 +1,6 @@
+# reference files
+ckan
+
 .ropeproject
 node_modules
 bower_components
