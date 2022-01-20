@@ -6,8 +6,7 @@ class SubakdcPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
 
     # IConfigurer
-
-    def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic', 'subakdc')
+    def update_config(self, config):
+        toolkit.add_template_directory(config, 'templates')
+        toolkit.add_public_directory(config, 'public')
+        toolkit.add_resource('./assets', 'subakdc_assets')
