@@ -1,14 +1,15 @@
-subakdc-js:
+subakdc_js:
   contents:
-    - cookie-banner.js
-  # filters: rjsmin
+    - js/cookie-banner.js
+  filters: rjsmin
   output: ckanext-subakdc/%(version)s_subakdc.js
-  # extra:
-  #   preload:
-  #     - base/main
+  extra:
+    preload:
+      - base/main
 
 # subakdc-css:
 #   filter: cssrewrite
 #   output: ckanext-subakdc/%(version)s_subakdc.css
   # contents:
     # - css/subakdc.css
+
