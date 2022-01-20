@@ -31,6 +31,14 @@
         {% endblock %}
     </div>
 
+    <div id="cookie-banner" class="fixed bottom-0 z-40 hidden w-full py-3 bg-darkblue">
+        <div class="container mx-auto text-center">
+            We use cookies to ensure that we give you the best experience on our website. By using this website you agree to our cookie and privacy policy. 
+            <a class="underline hover:text-slate-400" href="/pages/cookie-and-privacy-policy">Read More</a> 
+            <button class="px-3 py-2 mx-3 mt-3 xl:mt-0 bg-blue" onclick="acceptCookieNotice()">Accept</button>
+        </div>
+    </div>
+
     {% block footer_debug %}
     {% if g.debug %}
     {% include 'snippets/debug.html' %}
