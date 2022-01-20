@@ -8,7 +8,7 @@ First pass at a theme for Subak's Data Catalogue giving it our look and feel.
 
 Use Tailwind css. Install instructions [here](https://tailwindcss.com/docs/installation).  
 Navigate to the extension root folder (e.g. if mounted in src folder in `docker-ckan` while using development docker-compose file).  
-`npx tailwindcss -i ./src/input.css -o ./ckanext/subakdc/public/output.css --watch`
+`npm run dev`
 
 ## Requirements
 
