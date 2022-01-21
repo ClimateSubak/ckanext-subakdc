@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('/fonts/HelveticaNeue-Bold.ttf') format('truetype')
+    font-family: 'TeX Gyre Heros';
+    src: url('/fonts/texgyreheros-bold.otf') format('opentype')
 }
 
 @font-face {
