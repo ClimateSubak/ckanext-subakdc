@@ -1,13 +1,14 @@
 <footer class="site-footer">
-    <div class="container">
+    <div class="container px-24 pt-12 pb-36">
         {% block footer_content %}
         <div class="row">
-            <div class="col-md-8 footer-links">
+            <div class="col-md-8 footer-links font-body">
                 {% block footer_nav %}
                 <ul class="list-unstyled">
                     {% block footer_links %}
                     <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About
                             {0}').format(g.site_title) }}</a></li>
+                    <li><a href="/pages/cookie-and-privacy-policy">Cookie and Privacy Policy</a></li>
                     {% endblock %}
                 </ul>
                 <ul class="list-unstyled">
@@ -23,7 +24,7 @@
             </div>
             <div class="col-md-4 attribution">
                 {% block footer_attribution %}
-                <p>{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo"
+                <p class="font-body">{% trans %}<strong>Powered by</strong> <a class="hide-text ckan-footer-logo"
                         href="http://ckan.org">CKAN</a>{% endtrans %}</p>
                 {% endblock %}
             </div>
@@ -31,11 +32,10 @@
         {% endblock %}
     </div>
 
-    <div id="cookie-banner" class="fixed bottom-0 z-40 hidden w-full py-3 bg-darkblue">
-        <div class="container mx-auto text-center">
-            We use cookies to ensure that we give you the best experience on our website. By using this website you agree to our cookie and privacy policy. 
-            <a class="underline hover:text-slate-400" href="/pages/cookie-and-privacy-policy">Read More</a> 
-            <button class="px-3 py-2 mx-3 mt-3 xl:mt-0 bg-blue" onclick="acceptCookieNotice()">Accept</button>
+    <div data-module="cookie_banner" class="fixed bottom-0 z-40 hidden w-full py-3 bg-darkblue">
+        <div class="container flex items-center px-24 mx-auto">
+            <p class="my-2 font-body">We use cookies to ensure that we give you the best experience on our website. By using this website you agree to our cookie and privacy policy. <a class="underline hover:text-slate-400" href="/pages/cookie-and-privacy-policy">Read More</a></p>
+            <button id="accept-cookie-policy" class="px-5 py-3 ml-3 font-mono uppercase bg-blue">Accept</button>
         </div>
     </div>
 
