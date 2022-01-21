@@ -2,18 +2,18 @@
 {% set stats = h.get_site_statistics() %}
 
 <div class="float-none col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-    <form method="get" action="{% url_for 'dataset.search' %}" style="border-bottom: 2px solid #ddd;">
+    <form class="flex justify-between border-b-2 border-grey" method="get" action="{% url_for 'dataset.search' %}">
         <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}"
                id="field-main-search" 
                type="text" 
-               class="font-black font-heading hero-search-bar opacity-80 outline-0" 
+               class="font-black text-8xl text-white bg-transparent font-heading placeholder:opacity-50 focus:ring-2 max-w-[525px]" 
                name="q" 
                value="" 
                autocomplete="off"
                placeholder="Search data" />
         <button type="submit" aria-labelledby="search-label"
             style="background-color: transparent; background-color: transparent; padding: 4px; width: 100px; vertical-align: super; float:right;">
-            {# <i class="fa fa-search text-white text-[50px]"></i> #}
+            <i class="fa fa-search text-white text-[50px]"></i>
             <span class="sr-only" id="search-label">{{ _('Search') }}</span>
         </button>
     </form>
