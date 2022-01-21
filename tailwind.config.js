@@ -1,10 +1,12 @@
 module.exports = {
   content: ["./ckanext/subakdc/**/*.{html,js}"],
+  important: true,
   theme: {
     fontFamily: {
-    'ubuntu': ['Ubuntu Mono'],
-    'quicksand': ['Quicksand'],
-    'helvetica': ['Helvetica Neue']
+      'default': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      'body': ['Comfortaa', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      'heading': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      'mono': ['Ubuntu Mono', 'monospace']
     },
     extend: {
       colors: {

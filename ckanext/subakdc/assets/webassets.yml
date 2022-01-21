@@ -7,9 +7,10 @@ subakdc_js:
     preload:
       - base/main
 
-# subakdc-css:
-#   filter: cssrewrite
-#   output: ckanext-subakdc/%(version)s_subakdc.css
-  # contents:
-    # - css/subakdc.css
-
+subakdc_css:
+  contents:
+    - css/subak-fonts.css
+    - css/subak-styles.css
+    - css/tailwind.css
+  filter: cssrewrite
+  output: ckanext-subakdc/%(version)s_subakdc.css

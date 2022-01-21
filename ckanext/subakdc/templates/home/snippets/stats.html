@@ -1,9 +1,9 @@
 {% set stats = h.get_site_statistics() %}
 
-<div class="col-12 full-width" style="background-color: #EEEEEC;">
-    <div class="container" style="padding: 65px;">
+<div class="col-12 full-width bg-grey">
+    <div class="container p-24">
         <h3>{{ _('{0} statistics').format(g.site_title) }}</h3>
-        <ul>
+        <ul class="font-body">
             {% block stats_group %}
             <li>
                 <a href="{{ h.url_for('dataset.search') }}">
