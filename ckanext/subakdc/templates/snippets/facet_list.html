@@ -66,7 +66,7 @@ Dictionary with search facets(or `c.search_facets` if not provided)
 	{% with items = items or h.get_facet_items_dict(name, search_facets or c.search_facets) %}
 	{% if items %}
 	<nav aria-label="{{ title }}">
-		<ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
+		<ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet flex flex-wrap' }}">
 			{% for item in items %}
 			{% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active
 			else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
@@ -75,14 +75,14 @@ Dictionary with search facets(or `c.search_facets` if not provided)
 			{% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
 			<li style="padding: 7px 3px !important; border-bottom: none !important;">
 				{% if item.active %}
-				<button class="text-white font-bold rounded-full p-1 align-middle bg-orange active">
+				<button class="p-1 font-bold text-white align-middle rounded-full bg-orange active">
 					{% else %}
 					<button class="hover:bg-orange hover:animate-pulse text-white font-bold rounded-full p-1 align-middle
 				{{ 'bg-darkblue' if title=='Organizations' else 'bg-teal'
 				if title=='Tags' else 'bg-pink' if title=='Formats' else 'bg-blue' if title=='Licenses'}}">
 						{% endif %}
 						<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}" class="hover:no-underline">
-							<span class="item-label text-white p-2">{{ label_truncated }}</span>
+							<span class="p-2 text-white item-label">{{ label_truncated }}</span>
 							<span class="hidden separator"> - </span>
 							<span class="item-count badge">{{ count }}</span>
 						</a>
