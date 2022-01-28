@@ -1,124 +1,67 @@
-{% block header_wrapper %} {% block header_account %}
-<div class="account-masthead">
-  <div class="container">
-    {% block header_account_container_content %} {% if c.userobj %}
-    <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
-      <ul class="list-unstyled">
-        {% block header_account_logged %} {% if c.userobj.sysadmin %}
-        <li>
-          <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
-            <i class="fa fa-gavel" aria-hidden="true"></i>
-            <span class="text">{{ _('Admin') }}</span>
-          </a>
-        </li>
-        {% endif %}
-        <li>
-          <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
-            {{ h.user_image((c.user if c and c.user else ''), size=22) }}
-            <span class="username">{{ c.userobj.display_name }}</span>
-          </a>
-        </li>
-        {% set new_activities = h.new_activities() %}
-        <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
-          {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)',
-          new_activities)
-          %}
-          <a href="{{ h.url_for('dashboard.index') }}" title="{{ notifications_tooltip }}">
-            <i class="fa fa-tachometer" aria-hidden="true"></i>
-            <span class="text">{{ _('Dashboard') }}</span>
-            <span class="badge">{{ new_activities }}</span>
-          </a>
-        </li>
-        {% block header_account_settings_link %}
-        <li>
-          <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Profile settings') }}">
-            <i class="fa fa-cog" aria-hidden="true"></i>
-            <span class="text">{{ _('Profile settings') }}</span>
-          </a>
-        </li>
-        {% endblock %} {% block header_account_log_out_link %}
-        <li>
-          <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-            <span class="text">{{ _('Log out') }}</span>
-          </a>
-        </li>
-        {% endblock %} {% endblock %}
-      </ul>
-    </div>
-    {% else %}
-    <nav class="account not-authed" aria-label="{{ _('Account') }}">
-      <ul class="list-unstyled">
-        {% block header_account_notlogged %}
-        <li>{% link_for _('Log in'), named_route='user.login' %}</li>
-        {% if h.check_access('user_create') %}
-        <li>{% link_for _('Register'), named_route='user.register', class_='sub' %}</li>
-        {% endif %} {% endblock %}
-      </ul>
-    </nav>
-    {% endif %} {% endblock %}
-  </div>
-</div>
-{% endblock %}
-<nav class="navbar navbar-expand-lg fixed-top masthead">
-  <div class="container-fluid">
+{% ckan_extends %} 
 
-    <!-- Left hand side -->
-    <!-- to make this fixed left, add class="me-auto"-->
-    <div class="ml-12 mr-auto">
-      {% block header_debug %} 
+{% block header_wrapper %} 
+  {% block header_account %}
+  {{ super() }}
+  {% endblock %}
+  <nav class="navbar navbar-expand-lg fixed-top masthead">
+    <div class="container-fluid">
+
+      <!-- Left hand side -->
+      <div class="ml-12 mr-auto">
+        {% block header_debug %} 
         {% if g.debug and not g.debug_supress_header %}
-          <div class="absolute z-10 -top-11 debug">Controller : {{ c.controller }} | Action : {{ c.action }}</div>
+        <div class="absolute z-10 -top-11 debug">Controller : {{ c.controller }} | Action : {{ c.action }}</div>
         {% endif %} 
-      {% endblock %}
+        {% endblock %}
 
-      {% block header_logo %}
-      {% if g.site_logo %}
+        {% block header_logo %}
+        {% if g.site_logo %}
         <a class="z-50 p-0 mt-2 navbar-brand logo"
-           href="{{ h.url_for('home.index') }}">
+          href="{{ h.url_for('home.index') }}">
           <img class="float-left" src="/images/SUBAK_LOGO.png" aria-label="Home page" />
         </a>
-      {% endif %}
-      {% include 'home/snippets/catalogue_badge.html' %}
-      {% endblock %}
-    </div>
-
-    <!-- Right hand side -->
-    <div class="d-flex">
-      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button"
-        aria-label="expand or collapse" aria-expanded="false">
-        <span class="sr-only">{{ _('Toggle navigation') }}</span>
-        <span class="fa fa-bars"></span>
-      </button>
-
-
-      <div class="collapse navbar-collapse" id="main-navigation-toggle">
-        {% block header_site_navigation %}
-        <nav class="section navigation">
-          <ul class="nav nav-pills">
-            {% block header_site_navigation_tabs %}
-            {{ h.build_nav_main(
-            ('dataset.search', _('Datasets')),
-            ('organization.index', _('Organizations')),
-            ('home.about', _('About')) ) }}
-            {% endblock %}
-          </ul>
-        </nav>
-        {% endblock %} {% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for 'dataset.search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock
-              %}</label>
-            <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}"
-              aria-label="{{ _('Search datasets') }}" />
-            <button class="btn-search" type="submit" aria-label="{{ _('Submit') }}"><i
-                class="fa fa-search"></i></button>
-          </div>
-        </form>
+        {% endif %}
+        {% include 'home/snippets/catalogue_badge.html' %}
         {% endblock %}
       </div>
-    </div>
 
-  </div>
-</nav>
+      <!-- Right hand side -->
+      <div class="d-flex">
+        <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button"
+          aria-label="expand or collapse" aria-expanded="false">
+          <span class="sr-only">{{ _('Toggle navigation') }}</span>
+          <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navigation-toggle">
+          {% block header_site_navigation %}
+          <nav class="section navigation">
+            <ul class="nav nav-pills">
+              {% block header_site_navigation_tabs %}
+              {{ h.build_nav_main(
+              ('dataset.search', _('Datasets')),
+              ('organization.index', _('Organizations')),
+              ('home.about', _('About')) ) }}
+              {% endblock %}
+            </ul>
+          </nav>
+          {% endblock %} 
+          {% block header_site_search %}
+          <form class="section site-search simple-input" action="{% url_for 'dataset.search' %}" method="get">
+            <div class="field">
+              <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock
+                %}</label>
+              <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}"
+                aria-label="{{ _('Search datasets') }}" />
+              <button class="btn-search" type="submit" aria-label="{{ _('Submit') }}"><i
+                  class="fa fa-search"></i></button>
+            </div>
+          </form>
+          {% endblock %}
+        </div>
+      </div>
+
+    </div>
+  </nav>
 {% endblock %}
