@@ -1209,6 +1209,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-96 {
   padding-bottom: 24rem !important;
 }
+.pt-6 {
+  padding-top: 1.5rem !important;
+}
 .text-right {
   text-align: right !important;
 }
