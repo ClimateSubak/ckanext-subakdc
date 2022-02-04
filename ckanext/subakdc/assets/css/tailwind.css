@@ -4353,6 +4353,12 @@ textarea.form-control.is-invalid {
 .-top-11 {
   top: -2.75rem !important;
 }
+.right-0 {
+  right: 0px !important;
+}
+.top-7 {
+  top: 1.75rem !important;
+}
 .z-40 {
   z-index: 40 !important;
 }
@@ -4450,9 +4456,6 @@ textarea.form-control.is-invalid {
 }
 .flex-auto {
   flex: 1 1 auto !important;
-}
-.grow {
-  flex-grow: 1 !important;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
@@ -4590,6 +4593,9 @@ textarea.form-control.is-invalid {
 .pb-96 {
   padding-bottom: 24rem !important;
 }
+.pr-32 {
+  padding-right: 8rem !important;
+}
 .pt-6 {
   padding-top: 1.5rem !important;
 }
@@ -4702,12 +4708,6 @@ textarea.form-control.is-invalid {
 .outline {
   outline-style: solid !important;
 }
-.outline-0 {
-  outline-width: 0px !important;
-}
-.outline-2 {
-  outline-width: 2px !important;
-}
 .blur {
   --tw-blur: blur(8px) !important;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
@@ -4797,9 +4797,32 @@ the theme() function
   transition-duration: 150ms !important;
 }
 
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+.focus\:pl-4:focus {
+  padding-left: 1rem !important;
+}
+
+.focus\:text-darkblue:focus {
+  --tw-text-opacity: 1 !important;
+  color: rgb(15 43 67 / var(--tw-text-opacity)) !important;
+}
+
 .group:hover .group-hover\:text-teal {
   --tw-text-opacity: 1 !important;
   color: rgb(29 131 139 / var(--tw-text-opacity)) !important;
+}
+
+.peer:focus ~ .peer-focus\:right-4 {
+  right: 1rem !important;
+}
+
+.peer:focus ~ .peer-focus\:text-darkblue {
+  --tw-text-opacity: 1 !important;
+  color: rgb(15 43 67 / var(--tw-text-opacity)) !important;
 }
 
 .prose-p\:font-body :is(:where(p):not(:where([class~="not-prose"] *))) {
