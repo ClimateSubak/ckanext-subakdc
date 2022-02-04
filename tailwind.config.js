@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./ckanext/subakdc/**/*.{html,js}"],
+  content: ['./ckanext/subakdc/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   important: true,
   theme: {
     fontFamily: {
@@ -23,5 +23,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('tw-elements/dist/plugin')
   ],
 }
