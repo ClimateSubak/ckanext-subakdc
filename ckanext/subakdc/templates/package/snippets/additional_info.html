@@ -1,5 +1,31 @@
 <section class="additional-info">
     <h3>{{ _('Additional Information') }}</h3>
+    
+    <ul>
+        {% for field in pkg_dict %}
+            {% if field in ['subak_temporal_start', 
+                            'subak_temporal_end', 
+                            'subak_temporal_resolution', 
+                            'subak_update_frequency', 
+                            'subak_geo_region', 
+                            'subak_spatial_resolution'] %}
+                <li>{{field}}: {{ pkg_dict[field] }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+
+    {% if h.check_access('package_update',{'id':pkg_dict.id}) %}
+        {{ _("State") }}: {{ _(pkg_dict.state) }}
+    {% endif %}
+    {% if pkg_dict.metadata_modified %}
+        {{ _("Last Updated") }}: {% snippet 'snippets/local_friendly_datetime.html', datetime_obj=pkg_dict.metadata_modified %}
+    {% endif %}
+    {% if pkg_dict.metadata_created %}
+        {{ _("Created") }}: {% snippet 'snippets/local_friendly_datetime.html', datetime_obj=pkg_dict.metadata_created %}
+    {% endif %}
+    
+
     <table class="table table-striped table-bordered table-condensed" style="width: 100%">
         <colgroup>
             <col span="1" style="width: 20%;">
@@ -11,13 +37,13 @@
                 <th scope="col">{{ _('Field') }}</th>
                 <th scope="col">{{ _('Value') }}</th>
             </tr>
+            {% block package_additional_info %}{% endblock %}
         </thead>
         <tbody>
-            {% block package_additional_info %}{% endblock %}
 
             {% block extras scoped %}
                 {% if pkg_dict.extras %}
-                <tr><td class="bg-white pt-6" colspan="2">Extras</td></tr>
+                <tr><td class="pt-6 bg-white" colspan="2">Extras</td></tr>
                 {% endif %}
                 {% for extra in h.sorted_extras(pkg_dict.extras, auto_clean=true) %}
                 {% set key, value = extra %}
@@ -32,7 +58,7 @@
         {# This section is hidden with CSS but lists all the key/values on the package model. #}
         {# This includes many custom fields from the old schema that we might want to manually copy to the new schema fields. #}
         <tbody class="hidden">
-            <tr><td class="bg-white pt-6" colspan="2">All metadata</td></tr>
+            <tr><td class="pt-6 bg-white" colspan="2">All metadata</td></tr>
             {% for prop in pkg_dict.items() %}
             {% set key, value = prop %}
             <tr class="">
