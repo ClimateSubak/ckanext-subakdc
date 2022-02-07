@@ -38,6 +38,9 @@
           {% block header_site_navigation %}
           <nav class="section navigation">
             <ul class="nav nav-pills">
+              <li>
+                <a href="/pages/add-data"><img src="{{ '/images/add.svg' }}" class="inline"> Add Data</a>
+              </li>
               {% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
               ('dataset.search', _('Datasets')),

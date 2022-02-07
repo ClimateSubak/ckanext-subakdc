@@ -981,6 +981,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap !important;
   border-width: 0 !important;
 }
+.visible {
+  visibility: visible !important;
+}
+.static {
+  position: static !important;
+}
 .fixed {
   position: fixed !important;
 }
@@ -990,11 +996,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative !important;
 }
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
 .bottom-0 {
   bottom: 0px !important;
 }
 .-top-11 {
   top: -2.75rem !important;
+}
+.left-0 {
+  left: 0px !important;
+}
+.right-0 {
+  right: 0px !important;
+}
+.top-7 {
+  top: 1.75rem !important;
+}
+.-top-\[1px\] {
+  top: -1px !important;
 }
 .z-40 {
   z-index: 40 !important;
@@ -1022,6 +1044,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
+.my-4 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
 .ml-3 {
   margin-left: 0.75rem !important;
 }
@@ -1033,6 +1059,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-2 {
   margin-top: 0.5rem !important;
+}
+.mb-4 {
+  margin-bottom: 1rem !important;
 }
 .mt-3 {
   margin-top: 0.75rem !important;
@@ -1067,6 +1096,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-10 {
   margin-bottom: 2.5rem !important;
 }
+.mt-0 {
+  margin-top: 0px !important;
+}
 .block {
   display: block !important;
 }
@@ -1082,8 +1114,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none !important;
 }
+.h-full {
+  height: 100% !important;
+}
+.h-auto {
+  height: auto !important;
+}
+.h-52 {
+  height: 13rem !important;
+}
+.h-24 {
+  height: 6rem !important;
+}
+.h-10 {
+  height: 2.5rem !important;
+}
 .w-full {
   width: 100% !important;
+}
+.w-10 {
+  width: 2.5rem !important;
 }
 .max-w-none {
   max-width: none !important;
@@ -1091,8 +1141,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex-auto {
   flex: 1 1 auto !important;
 }
-.grow {
-  flex-grow: 1 !important;
+.flex-1 {
+  flex: 1 1 0% !important;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+.resize {
+  resize: both !important;
+}
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-col {
+  flex-direction: column !important;
 }
 .flex-wrap {
   flex-wrap: wrap !important;
@@ -1100,8 +1162,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-center {
   align-items: center !important;
 }
+.justify-center {
+  justify-content: center !important;
+}
 .justify-between {
   justify-content: space-between !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+.gap-4 {
+  gap: 1rem !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
 }
 .truncate {
   overflow: hidden !important;
@@ -1163,6 +1240,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1 !important;
   background-color: rgb(238 238 236 / var(--tw-bg-opacity)) !important;
 }
+.bg-zinc-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity)) !important;
+}
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops)) !important;
+}
+.from-white {
+  --tw-gradient-from: #ffffff !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0)) !important;
+}
 .p-0 {
   padding: 0px !important;
 }
@@ -1180,6 +1268,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-5 {
   padding: 1.25rem !important;
+}
+.p-4 {
+  padding: 1rem !important;
 }
 .px-24 {
   padding-left: 6rem !important;
@@ -1208,6 +1299,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-96 {
   padding-bottom: 24rem !important;
+}
+.pr-32 {
+  padding-right: 8rem !important;
+}
+.pt-6 {
+  padding-top: 1.5rem !important;
 }
 .text-right {
   text-align: right !important;
@@ -1273,6 +1370,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .uppercase {
   text-transform: uppercase !important;
 }
+.capitalize {
+  text-transform: capitalize !important;
+}
 .leading-10 {
   line-height: 2.5rem !important;
 }
@@ -1315,11 +1415,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-text-decoration-style: dashed !important;
           text-decoration-style: dashed !important;
 }
-.outline-0 {
-  outline-width: 0px !important;
+.outline {
+  outline-style: solid !important;
 }
-.outline-2 {
-  outline-width: 2px !important;
+.blur {
+  --tw-blur: blur(8px) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 .transition {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter !important;
@@ -1403,9 +1507,32 @@ the theme() function
   transition-duration: 150ms !important;
 }
 
+.focus\:bg-white:focus {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+.focus\:pl-4:focus {
+  padding-left: 1rem !important;
+}
+
+.focus\:text-darkblue:focus {
+  --tw-text-opacity: 1 !important;
+  color: rgb(15 43 67 / var(--tw-text-opacity)) !important;
+}
+
 .group:hover .group-hover\:text-teal {
   --tw-text-opacity: 1 !important;
   color: rgb(29 131 139 / var(--tw-text-opacity)) !important;
+}
+
+.peer:focus ~ .peer-focus\:right-4 {
+  right: 1rem !important;
+}
+
+.peer:focus ~ .peer-focus\:text-darkblue {
+  --tw-text-opacity: 1 !important;
+  color: rgb(15 43 67 / var(--tw-text-opacity)) !important;
 }
 
 .prose-p\:font-body :is(:where(p):not(:where([class~="not-prose"] *))) {
