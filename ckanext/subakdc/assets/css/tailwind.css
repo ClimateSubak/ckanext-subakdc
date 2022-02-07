@@ -1012,6 +1012,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-7 {
   top: 1.75rem !important;
 }
+.-top-\[1px\] {
+  top: -1px !important;
+}
 .z-40 {
   z-index: 40 !important;
 }
@@ -1037,6 +1040,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-2 {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
+}
+.my-4 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 .ml-3 {
   margin-left: 0.75rem !important;
@@ -1107,9 +1114,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full {
   width: 100% !important;
 }
-.w-1\/2 {
-  width: 50% !important;
-}
 .w-10 {
   width: 2.5rem !important;
 }
@@ -1118,6 +1122,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-auto {
   flex: 1 1 auto !important;
+}
+.flex-1 {
+  flex: 1 1 0% !important;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
@@ -1148,6 +1155,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .justify-evenly {
   justify-content: space-evenly !important;
+}
+.gap-4 {
+  gap: 1rem !important;
 }
 .truncate {
   overflow: hidden !important;
@@ -1209,6 +1219,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1 !important;
   background-color: rgb(238 238 236 / var(--tw-bg-opacity)) !important;
 }
+.bg-zinc-100 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity)) !important;
+}
 .p-0 {
   padding: 0px !important;
 }
@@ -1226,6 +1240,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-5 {
   padding: 1.25rem !important;
+}
+.p-4 {
+  padding: 1rem !important;
 }
 .px-24 {
   padding-left: 6rem !important;
