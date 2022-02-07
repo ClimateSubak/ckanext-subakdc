@@ -1006,6 +1006,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-top-11 {
   top: -2.75rem !important;
 }
+.left-0 {
+  left: 0px !important;
+}
 .right-0 {
   right: 0px !important;
 }
@@ -1056,6 +1059,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-2 {
   margin-top: 0.5rem !important;
+}
+.mb-4 {
+  margin-bottom: 1rem !important;
 }
 .mt-3 {
   margin-top: 0.75rem !important;
@@ -1111,6 +1117,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-full {
   height: 100% !important;
 }
+.h-auto {
+  height: auto !important;
+}
+.h-52 {
+  height: 13rem !important;
+}
+.h-24 {
+  height: 6rem !important;
+}
 .h-10 {
   height: 2.5rem !important;
 }
@@ -1161,6 +1176,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-4 {
   gap: 1rem !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
 }
 .truncate {
   overflow: hidden !important;
@@ -1225,6 +1243,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-zinc-100 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity)) !important;
+}
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops)) !important;
+}
+.from-white {
+  --tw-gradient-from: #ffffff !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0)) !important;
 }
 .p-0 {
   padding: 0px !important;
