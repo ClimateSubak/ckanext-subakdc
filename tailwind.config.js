@@ -10,14 +10,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        darkblue: '#0f2b43',
-        orange: '#c95e3b',
-        grey: '#eeeeec',
-        white: '#ffffff',
-        teal: '#1d838b',
-        pink: '#b0566b',
-        blue: '#1b658f',
-        lightblue: '#3bc8ec'
+        'subak-deep-ocean': '#0f2b43',
+        'subak-burnt-copper': '#c95e3b',
+        'subak-stone-grey': '#eeeeec',
+        'subak-meadow-teal': '#1d838b',
+        'subak-purple-rain': '#b0566b',
+        'subak-marine-blue': '#1b658f',
+        'subak-sky-blue': '#3bc8ec'
       },
     },
   },

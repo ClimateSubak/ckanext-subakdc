@@ -57,8 +57,8 @@ Dictionary with search facets(or `c.search_facets` if not provided)
 	<h2 class="module-heading">
 		<i class="fa fa-filter"></i>
 		{% set title = title or h.get_facet_title(name) %}
-		<span class="{{ 'text-darkblue' if title=='Organizations' else 'text-teal'
-			if title=='Tags' else 'text-pink' if title=='Formats' else 'text-blue' if title=='Licenses'}}">
+		<span class="{{ 'text-subak-deep-ocean' if title=='Organizations' else 'text-subak-meadow-teal'
+			if title=='Tags' else 'text-subak-purple-rain' if title=='Formats' else 'text-subak-marine-blue' if title=='Licenses'}}">
 			{{title }}
 	</h2>
 	{% endblock %}
@@ -75,11 +75,14 @@ Dictionary with search facets(or `c.search_facets` if not provided)
 			{% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
 			<li style="padding: 7px 3px !important; border-bottom: none !important;">
 				{% if item.active %}
-				<button class="p-1 font-bold text-white align-middle rounded-full bg-orange active">
+				<button class="p-1 font-bold text-white align-middle rounded-full bg-subak-burnt-copper active">
 					{% else %}
-					<button class="hover:bg-orange hover:animate-pulse text-white font-bold rounded-full p-1 align-middle
-				{{ 'bg-darkblue' if title=='Organizations' else 'bg-teal'
-				if title=='Tags' else 'bg-pink' if title=='Formats' else 'bg-blue' if title=='Licenses'}}">
+					<button class="hover:bg-subak-burnt-copper text-white font-bold rounded-full p-1 align-middle
+							 {{ 'bg-subak-deep-ocean' if title=='Organizations' else 
+								'bg-subak-sky-blue' if title=='Groups' else 
+								'bg-subak-meadow-teal' if title=='Tags' else 
+								'bg-subak-purple-rain' if title=='Formats' else 
+								'bg-subak-marine-blue' if title=='Licenses' }}">
 						{% endif %}
 						<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}" class="hover:no-underline">
 							<span class="p-1 text-white item-label">{{ label_truncated }}</span>
