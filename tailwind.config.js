@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./ckanext/subakdc/**/*.{html,js}'],
+  content: ['./ckanext/subakdc/**/*.{html,js}', '../ckanext-subakdc-plugins/**/*.{html,js}'],
   important: true,
   theme: {
     fontFamily: {

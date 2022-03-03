@@ -1154,6 +1154,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex-1 {
   flex: 1 1 0% !important;
 }
+.table-auto {
+  table-layout: auto !important;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
@@ -1208,11 +1211,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-2 {
   border-width: 2px !important;
 }
+.border-b {
+  border-bottom-width: 1px !important;
+}
 .border-b-2 {
   border-bottom-width: 2px !important;
 }
 .border-solid {
   border-style: solid !important;
+}
+.border-gray-200 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
 }
 .border-subak-stone-grey {
   --tw-border-opacity: 1 !important;
@@ -1221,6 +1231,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-white {
   --tw-border-opacity: 1 !important;
   border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+}
+.bg-gray-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
 }
 .bg-subak-deep-ocean {
   --tw-bg-opacity: 1 !important;
@@ -1278,6 +1292,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .to-cyan-400 {
   --tw-gradient-to: #22d3ee !important;
 }
+.p-2 {
+  padding: 0.5rem !important;
+}
 .p-0 {
   padding: 0px !important;
 }
@@ -1313,6 +1330,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2rem !important;
   padding-right: 2rem !important;
 }
+.pl-0 {
+  padding-left: 0px !important;
+}
+.pr-0 {
+  padding-right: 0px !important;
+}
 .pt-8 {
   padding-top: 2rem !important;
 }
@@ -1340,11 +1363,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .align-middle {
   vertical-align: middle !important;
 }
-.font-default {
-  font-family: TeX Gyre Heros, Helvetica, Arial, sans-serif !important;
-}
 .font-body {
   font-family: Comfortaa, Helvetica, Arial, sans-serif !important;
+}
+.font-default {
+  font-family: TeX Gyre Heros, Helvetica, Arial, sans-serif !important;
 }
 .font-mono {
   font-family: Ubuntu Mono, monospace !important;
