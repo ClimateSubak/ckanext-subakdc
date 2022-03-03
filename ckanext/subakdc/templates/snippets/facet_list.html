@@ -82,7 +82,8 @@ Dictionary with search facets(or `c.search_facets` if not provided)
 								'bg-subak-sky-blue' if title=='Groups' else 
 								'bg-subak-meadow-teal' if title=='Tags' else 
 								'bg-subak-purple-rain' if title=='Formats' else 
-								'bg-subak-marine-blue' if title=='Licenses' }}">
+								'bg-subak-marine-blue' if title=='Licenses' else
+								'bg-subak-deep-ocean' }}">
 						{% endif %}
 						<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}" class="hover:no-underline">
 							<span class="p-1 text-white item-label">{{ label_truncated }}</span>
