@@ -82,3 +82,9 @@ body {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* Hide the QA field in the dataset create/update form */
+#field-subak_qa,
+label[for="field-subak_qa"] {
+  display: none;
+}
