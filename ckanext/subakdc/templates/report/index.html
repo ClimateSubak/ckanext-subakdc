@@ -6,7 +6,10 @@
     <li>{{ h.nav_link(_('Reports'), named_route='report.index') }}</li>
 {% endblock %}
 
-{% block primary_content %}
+{% block main_content %}
+    {% block flash %}{{ super() }}{% endblock %}
+    {% block toolbar %}{{ super() }}{% endblock %}
+    
     <section class="module">
         <div class="module-content">
             <h1>Reports</h1>
