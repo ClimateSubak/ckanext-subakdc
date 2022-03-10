@@ -7,7 +7,10 @@
     <li>{{ h.nav_link(report.title, named_route='report-org' if '/organization' in request.environ.get('PATH_INFO', '') else 'report.view', report_name=report_name) }}</li>
 {% endblock%}
 
-{% block primary_content %}
+{% block main_content %}
+    {% block flash %}{{ super() }}{% endblock %}
+    {% block toolbar %}{{ super() }}{% endblock %}
+    
     <section class="module">
         <div class="module-content">
             <h1>{{ report.title }}</h1>
